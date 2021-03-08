@@ -1,15 +1,12 @@
+FOR THE FULL VERSION OF THE ANALYSIS PLEASE OPEN THE HTML FILE IN THIS DIRECTORY
+
 Discovery cohort: Genome-Wide Association Study
 ================
 Dionysios Grigoriadis
 2021-03-08
 
-<style>
-h1 {background: brown;color: white;padding-left: 7px;}
-h2 {background: grey;color: white;padding-left: 7px;}
-h3 {color: brown;}
-</style>
 
-FOR THE FULL VERSION OF THE ANALYSIS PLEASE OPEN THE HTML FILE IN THIS DIRECTORY
+
 
 # Setup
 
