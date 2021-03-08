@@ -9,6 +9,8 @@ h2 {background: grey;color: white;padding-left: 7px;}
 h3 {color: brown;}
 </style>
 
+FOR THE FULL VERSION OF THE ANALYSIS PLEASE OPEN THE HTML FILE IN THIS DIRECTORY
+
 # Setup
 
 We should first configure where Rstudio loads packages from, we just
