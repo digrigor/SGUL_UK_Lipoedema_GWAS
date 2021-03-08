@@ -1,4 +1,4 @@
-FOR THE FULL VERSION OF THE ANALYSIS PLEASE OPEN THE HTML FILE IN THIS DIRECTORY
+**FOR THE FULL VERSION OF THE ANALYSIS PLEASE OPEN [THIS HTML FILE](lipoedema_supplementary.html)**
 
 Discovery cohort: Genome-Wide Association Study
 ================
