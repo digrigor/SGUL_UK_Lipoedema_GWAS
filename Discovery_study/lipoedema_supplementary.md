@@ -1382,7 +1382,7 @@ stopifnot(file.exists(ibd))
 miss_tab <- read.table(file=imiss, header=T, stringsAsFactors = FALSE)
 het_tab <- read.table(file=het, header=T, stringsAsFactors = FALSE)
 sexchk_tab <- read.table(file=sexcheck, header=T, stringsAsFactors = FALSE)
-#ibd_tab <- data.frame(fread(ibd, header=T), stringsAsFactors = FALSE)
+ibd_tab <- data.frame(fread(ibd, header=T), stringsAsFactors = FALSE)
 ```
 
 ### Calculating Heterozygocity and Calling Rate per sample
@@ -1433,7 +1433,7 @@ Grey horizontal line: Calling Rate=0.97 threshold Green vertical line:
 threshold 77 Outliers (will be excluded)
 
 ``` r
-#ibd_tab = ibd_tab[!(ibd_tab$IID1 %in% outliers | ibd_tab$IID2 %in% outliers),]
+ibd_tab = ibd_tab[!(ibd_tab$IID1 %in% outliers | ibd_tab$IID2 %in% outliers),]
 sexchk_tab = sexchk_tab[!sexchk_tab$IID %in% outliers,]
 snpsex = sexchk_tab$SNPSEX
 names(snpsex) = sexchk_tab$IID
@@ -1457,8 +1457,11 @@ PI\_HAT distribution:
 #write.table(ibdth,"tempibd.txt", quote = F, row.names = F)
 
 #IBD stats before excluding relateds:
-#+summary(ibd_tab$PI_HAT)
+summary(ibd_tab$PI_HAT)
 ```
+
+    ##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+    ## 0.000000 0.000000 0.000000 0.003524 0.006300 1.000000
 
 For unrelated samples the highest acceptable IBD is 0.05 (red line). The
 related samples have an IBD of around 0.5 as it was expected (we knew
@@ -1468,8 +1471,8 @@ Female \> Male 2) Genotyping Calling Rate
 
 After relateds exclusion:
 
-    ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-    ## 0.00000 0.00000 0.00490 0.00637 0.01050 0.04220
+    ##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+    ## 0.000000 0.000000 0.000000 0.003524 0.006300 1.000000
 
     ## 27  related controls will be excluded
 
@@ -2170,7 +2173,7 @@ stopifnot(file.exists(ibd))
 miss_tab <- read.table(file=imiss, header=T, stringsAsFactors = FALSE)
 het_tab <- read.table(file=het, header=T, stringsAsFactors = FALSE)
 sexchk_tab <- read.table(file=sexcheck, header=T, stringsAsFactors = FALSE)
-#ibd_tab <- data.frame(fread(file=ibd, header=T), stringsAsFactors = FALSE)
+ibd_tab <- data.frame(fread(file=ibd, header=T), stringsAsFactors = FALSE)
 ```
 
 # QC Measurements
@@ -2230,7 +2233,7 @@ plink_exclude1 = miss_tab[miss_tab$IID %in% outliers,c('FID', 'IID')]
 
 het_tab = het_tab[!(het_tab$IID %in% outliers),]
 miss_tab = miss_tab[!(miss_tab$IID %in% outliers),]
-#ibd_tab = ibd_tab[!(ibd_tab$IID1 %in% outliers | ibd_tab$IID2 %in% outliers),]
+ibd_tab = ibd_tab[!(ibd_tab$IID1 %in% outliers | ibd_tab$IID2 %in% outliers),]
 sexchk_tab = sexchk_tab[!sexchk_tab$IID %in% outliers,]
 ```
 
@@ -2255,8 +2258,11 @@ so we don’t expect any more relateds in the cohort.
 Let’s check the IBD summary statistics (PI\_HAT \< 0.05).
 
 ``` r
-#summary(ibd_tab$PI_HAT)
+summary(ibd_tab$PI_HAT)
 ```
+
+    ##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+    ## 0.000000 0.000000 0.000000 0.003466 0.006100 0.048200
 
 Maximum PI\_HAT is \< 0.05 so there are no related people in the
 data-set.
