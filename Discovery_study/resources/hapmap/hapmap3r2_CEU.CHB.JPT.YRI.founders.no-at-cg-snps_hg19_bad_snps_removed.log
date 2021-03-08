@@ -1,0 +1,30 @@
+PLINK v1.90b5.4 64-bit (10 Apr 2018)
+Options in effect:
+  --bfile hapmap3r2_CEU.CHB.JPT.YRI.founders.no-at-cg-snps_hg19
+  --exclude bad_liftover_snps_to_remove.txt
+  --make-bed
+  --out hapmap3r2_CEU.CHB.JPT.YRI.founders.no-at-cg-snps_hg19_bad_snps_removed
+
+Hostname: stats3
+Working directory: /homes/athosnew/Genetics_Centre_Bioinformatics/resourses/Genome_reference_files
+Start time: Wed Mar  6 11:54:03 2019
+
+Random number seed: 1551873243
+386688 MB RAM detected; reserving 193344 MB for main workspace.
+1047171 variants loaded from .bim file.
+395 people (199 males, 196 females) loaded from .fam.
+395 phenotype values loaded from .fam.
+--exclude: 1016666 variants remaining.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 395 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.997219.
+1016666 variants and 395 people pass filters and QC.
+Phenotype data is quantitative.
+--make-bed to
+hapmap3r2_CEU.CHB.JPT.YRI.founders.no-at-cg-snps_hg19_bad_snps_removed.bed +
+hapmap3r2_CEU.CHB.JPT.YRI.founders.no-at-cg-snps_hg19_bad_snps_removed.bim +
+hapmap3r2_CEU.CHB.JPT.YRI.founders.no-at-cg-snps_hg19_bad_snps_removed.fam ...
+done.
+
+End time: Wed Mar  6 11:54:09 2019
